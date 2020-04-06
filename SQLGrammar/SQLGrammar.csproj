@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Streamx.Linq.SQL.Grammar</RootNamespace>
+    </PropertyGroup>
+
+    <Import Project="../Commons.csproj" />
+
+    <PropertyGroup>
+        <PackageId>Streamx.Linq.SQL.Grammar</PackageId>
+        <Description>Streamx Linq Grammar</Description>
+    </PropertyGroup>
+
+</Project>
