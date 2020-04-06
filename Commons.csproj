@@ -1,8 +1,6 @@
 <Project>
     <!-- https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets -->
     <PropertyGroup>
-        <VersionPrefix>3.1.4</VersionPrefix>
-        <VersionSuffix></VersionSuffix>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Company>Streamx LLC</Company>
         <Authors>Konstantin Triger</Authors>

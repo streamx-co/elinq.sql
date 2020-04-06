@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;net471</TargetFrameworks>
     <RootNamespace>Streamx.Linq.SQL</RootNamespace>
+    <VersionPrefix>3.1.5</VersionPrefix>
+    <!--<VersionSuffix>preview</VersionSuffix>-->
   </PropertyGroup>
 
   <Import Project="../Commons.csproj" />
