@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>Streamx.Linq.SQL.Grammar</RootNamespace>
+        <AssemblyName>Streamx.Linq.SQL.Grammar</AssemblyName>
         <VersionPrefix>3.1.4</VersionPrefix>
         <!--<VersionSuffix>preview</VersionSuffix>-->
     </PropertyGroup>
