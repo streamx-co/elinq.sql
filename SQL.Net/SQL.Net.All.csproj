@@ -5,7 +5,6 @@
     <AssemblyName>Streamx.Linq.SQL</AssemblyName>
     <VersionPrefix>3.1.5</VersionPrefix>
     <!--<VersionSuffix>preview</VersionSuffix>-->
-    <noWarn>1591</noWarn>
   </PropertyGroup>
 
   <Import Project="../Commons.csproj" />

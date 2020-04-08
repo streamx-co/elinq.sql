@@ -10,6 +10,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageProjectUrl>http://xlinq.live</PackageProjectUrl>
         <RootNamespace>$(AssemblyName)</RootNamespace>
+        <noWarn>1591</noWarn>
     </PropertyGroup>
 
 </Project>
