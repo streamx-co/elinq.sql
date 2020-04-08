@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <AssemblyName>Streamx.Linq.SQL</AssemblyName>
-        <PackageTags>XLINQ;LINQ;SQL;Entity;Framework;Core;entity-framework-core;EF;Data;O/RM;EntityFramework;EntityFrameworkCore;EFCore</PackageTags>
         <noWarn>1591</noWarn>
     </PropertyGroup>
 
