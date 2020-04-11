@@ -13,6 +13,16 @@ namespace Streamx.Linq.SQL.MySQL {
             throw new NotSupportedException();
         }
 
+        [Function("VALUES")]
+        public static T INSERTED_VALUES<T>(T expression) {
+            throw new NotSupportedException();
+        }
+
+        [Function(OmitParentheses = true)]
+        public static T LATERAL<T>(T subQuery) {
+            throw new NotSupportedException();
+        }
+
         [Function]
         public static int LENGTH(String expression) {
             throw new NotSupportedException();

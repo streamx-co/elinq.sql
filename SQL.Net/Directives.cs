@@ -146,6 +146,15 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
+        /// Do not alias entities. Used in advanced vendor specific cases.
+        /// (Some vendors do not allow aliasing in some <code>INSERT/UPDATE/MERGE</code> scenarios)  
+        /// </summary>
+        [Alias(false)]
+        public static void NoAlias(params Object[] entities) {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
         /// Creates table projection for INSERT, UPDATE
         /// </summary>
         /// <param name="tuple">C# value tuple, e.g. <code>(blog.Name, blog.Author)</code></param>
