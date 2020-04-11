@@ -8,7 +8,7 @@
         <Copyright>© Streamx LLC. All rights reserved.</Copyright>
         <SourceRevisionId>date$([System.DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mmZ"))</SourceRevisionId>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <PackageProjectUrl>http://xlinq.live</PackageProjectUrl>
+        <PackageProjectUrl>https://entitylinq.com</PackageProjectUrl>
         <PackageIcon>icon-256.png</PackageIcon>
         <RootNamespace>$(AssemblyName)</RootNamespace>
         <noWarn>1591</noWarn>
