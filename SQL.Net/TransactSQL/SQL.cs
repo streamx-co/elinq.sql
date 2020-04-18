@@ -8,13 +8,15 @@ namespace Streamx.Linq.SQL.TransactSQL {
     public static class SQL {
         // Clauses
 
-        [Function(OmitParentheses = true)]
-        public static T CROSS_APPLY<T>(T subQuery) {
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.From)]
+        [Operator(OmitParentheses = true)]
+        public static IJoinClause CROSS_APPLY<T>(this IJoinClause from, T subQuery) where T : class {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
-        public static T OUTER_APPLY<T>(T subQuery) {
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.From)]
+        [Operator(OmitParentheses = true)]
+        public static IJoinClause OUTER_APPLY<T>(this IJoinClause from, T subQuery) where T : class {
             throw new NotSupportedException();
         }
 
@@ -492,19 +494,19 @@ namespace Streamx.Linq.SQL.TransactSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<T> OUTPUT<T>(T expression) where T : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2)> OUTPUT<T1, T2>((T1, T2) expression)
             where T1 : IComparable
             where T2 : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3)> OUTPUT<T1, T2, T3>((T1, T2, T3) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -512,7 +514,7 @@ namespace Streamx.Linq.SQL.TransactSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4)> OUTPUT<T1, T2, T3, T4>((T1, T2, T3, T4) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -521,7 +523,7 @@ namespace Streamx.Linq.SQL.TransactSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4, T5)> OUTPUT<T1, T2, T3, T4, T5>((T1, T2, T3, T4, T5) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -531,7 +533,7 @@ namespace Streamx.Linq.SQL.TransactSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4, T5, T6)> OUTPUT<T1, T2, T3, T4, T5, T6>((T1, T2, T3, T4, T5, T6) expression)
             where T1 : IComparable
             where T2 : IComparable
