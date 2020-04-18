@@ -47,12 +47,12 @@ namespace Streamx.Linq.SQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static T DISTINCT<T>(T expression) where T : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static T? DISTINCT<T>(T? expression) where T : struct, IComparable {
             throw new NotSupportedException();
         }
@@ -68,12 +68,12 @@ namespace Streamx.Linq.SQL {
             throw new NotSupportedException();
         }
 
-        [Function("", OmitParentheses = true)]
+        [Function("", OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static T ALL<T>(T expression) where T : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function("", OmitParentheses = true)]
+        [Function("", OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static T? ALL<T>(T? expression) where T : struct, IComparable {
             throw new NotSupportedException();
         }

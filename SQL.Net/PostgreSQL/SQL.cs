@@ -225,19 +225,19 @@ namespace Streamx.Linq.SQL.PostgreSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<T> RETURNING<T>(T expression) where T : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2)> RETURNING<T1, T2>((T1, T2) expression)
             where T1 : IComparable
             where T2 : IComparable {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3)> RETURNING<T1, T2, T3>((T1, T2, T3) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -245,7 +245,7 @@ namespace Streamx.Linq.SQL.PostgreSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4)> RETURNING<T1, T2, T3, T4>((T1, T2, T3, T4) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -254,7 +254,7 @@ namespace Streamx.Linq.SQL.PostgreSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4, T5)> RETURNING<T1, T2, T3, T4, T5>((T1, T2, T3, T4, T5) expression)
             where T1 : IComparable
             where T2 : IComparable
@@ -264,7 +264,7 @@ namespace Streamx.Linq.SQL.PostgreSQL {
             throw new NotSupportedException();
         }
 
-        [Function(OmitParentheses = true)]
+        [Function(OmitParentheses = true, ParameterContext = ParameterContext.Select)]
         public static ITupleSelectClause<(T1, T2, T3, T4, T5, T6)> RETURNING<T1, T2, T3, T4, T5, T6>((T1, T2, T3, T4, T5, T6) expression)
             where T1 : IComparable
             where T2 : IComparable
