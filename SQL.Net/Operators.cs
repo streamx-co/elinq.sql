@@ -7,19 +7,42 @@ using Streamx.Linq.SQL.Grammar;
 namespace Streamx.Linq.SQL {
     public static class Operators {
         // Set operators
+        
+        /// <summary>
+        /// Check your vendor support
+        /// </summary>
         [Function(OmitParentheses = true)]
         public static void EXCEPT() {
             throw new NotSupportedException();
         }
+        
+        /// <summary>
+        /// Check your vendor support
+        /// </summary>
+        [Function(OmitParentheses = true)]
+        public static void EXCEPT_ALL() {
+            throw new NotSupportedException();
+        }
 
+        /// <summary>
+        /// Check your vendor support
+        /// </summary>
         [Function(OmitParentheses = true)]
         public static void INTERSECT() {
             throw new NotSupportedException();
         }
+        
+        /// <summary>
+        /// Check your vendor support
+        /// </summary>
+        [Function(OmitParentheses = true)]
+        public static void INTERSECT_ALL() {
+            throw new NotSupportedException();
+        }
 
-        /**
-     * Same as UNION DISTINCT
-     */
+        /// <summary>
+        /// Same as UNION DISTINCT
+        /// </summary>
         [Function(OmitParentheses = true)]
         public static void UNION() {
             throw new NotSupportedException();

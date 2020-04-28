@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using Streamx.Linq.SQL.Grammar;
 using static Streamx.Linq.SQL.SQL;
 using static Streamx.Linq.SQL.Directives;
 
 namespace Streamx.Linq.SQL {
     public static class Library {
-        public static TProperty pick<TEntity, TProperty>(TEntity entity, TProperty expression)
+        /// <summary>
+        /// Create projection returning a single value (assuming the result has only single row)
+        /// </summary>
+        public static TProperty PickSingle<TEntity, TProperty>(TEntity entity, TProperty expression)
             where TEntity : class, new()
             where TProperty : IComparable {
             return SubQuery(() => {
@@ -17,7 +19,10 @@ namespace Streamx.Linq.SQL {
             });
         }
 
-        public static TProperty? pick<TEntity, TProperty>(TEntity entity, TProperty? expression)
+        /// <summary>
+        /// Create projection returning a single value (assuming the result has only single row)
+        /// </summary>
+        public static TProperty? PickSingle<TEntity, TProperty>(TEntity entity, TProperty? expression)
             where TEntity : class, new()
             where TProperty : struct, IComparable {
             return SubQuery(() => {
@@ -27,7 +32,10 @@ namespace Streamx.Linq.SQL {
             });
         }
 
-        public static ICollection<TProperty> collect<TEntity, TProperty>(TEntity entity, TProperty expression)
+        /// <summary>
+        /// Create projection returning a collection (e.g. column)
+        /// </summary>
+        public static ICollection<TProperty> PickMany<TEntity, TProperty>(TEntity entity, TProperty expression)
             where TEntity : class, new()
             where TProperty : IComparable {
             return SubQuery(() => {
@@ -37,7 +45,10 @@ namespace Streamx.Linq.SQL {
             });
         }
 
-        public static ICollection<TProperty?> collect<TEntity, TProperty>(TEntity entity, TProperty? expression)
+        /// <summary>
+        /// Create projection returning a collection (e.g. column)
+        /// </summary>
+        public static ICollection<TProperty?> PickMany<TEntity, TProperty>(TEntity entity, TProperty? expression)
             where TEntity : class, new()
             where TProperty : struct, IComparable {
             return SubQuery(() => {
@@ -49,6 +60,9 @@ namespace Streamx.Linq.SQL {
 
         private static readonly Keyword ASTERISK = new Keyword("*");
 
+        /// <summary>
+        /// A shortcut for COUNT(*)
+        /// </summary>
         public static int COUNT() {
             return AggregateFunctions.COUNT(ASTERISK);
         }
