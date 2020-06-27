@@ -244,5 +244,11 @@ namespace Streamx.Linq.SQL {
 
             return result;
         }
+        
+        /// <summary>
+        /// Includes the passed SQL as is
+        /// </summary>
+        [Local]
+        public static IKeyword InjectSQL(String sql) => new Keyword(sql);
     }
 }
