@@ -6,7 +6,7 @@ using Streamx.Linq.SQL.Grammar;
 namespace Streamx.Linq.SQL {
     public static class Directives {
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<T>(Func<IQueryResult<T>> query) {
@@ -14,7 +14,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, T>(Func<TEntity0, IQueryResult<T>> query) {
@@ -22,7 +22,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, TEntity1, T>(Func<TEntity0, TEntity1, IQueryResult<T>> query) {
@@ -30,7 +30,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, TEntity1, TEntity2, T>(Func<TEntity0, TEntity1, TEntity2, IQueryResult<T>> query) {
@@ -38,7 +38,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, TEntity1, TEntity2, TEntity3, T>(Func<TEntity0, TEntity1, TEntity2, TEntity3, IQueryResult<T>> query) {
@@ -46,7 +46,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, TEntity1, TEntity2, TEntity3, TEntity4, T>(
@@ -55,7 +55,7 @@ namespace Streamx.Linq.SQL {
         }
 
         /// <summary>
-        /// Creates an XLINQ subquery.
+        /// Creates an ELINQ subquery.
         /// </summary>
         [SubQuery]
         public static T SubQuery<TEntity0, TEntity1, TEntity2, TEntity3, TEntity4, TEntity5, T>(
@@ -157,6 +157,7 @@ namespace Streamx.Linq.SQL {
         /// <summary>
         /// Creates table projection for INSERT, UPDATE
         /// </summary>
+        /// <param name="tableReference">entity to project</param>
         /// <param name="tuple">C# value tuple, e.g. <code>(blog.Name, blog.Author)</code></param>
         [CommonTableExpression(CommonTableExpressionType.Decorator)]
         [Function("",
@@ -244,5 +245,11 @@ namespace Streamx.Linq.SQL {
 
             return result;
         }
+        
+        /// <summary>
+        /// Includes the passed SQL as is
+        /// </summary>
+        [Local]
+        public static IKeyword InjectSQL(String sql) => new Keyword(sql);
     }
 }
