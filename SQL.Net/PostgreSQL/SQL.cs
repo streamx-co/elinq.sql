@@ -361,6 +361,11 @@ namespace Streamx.Linq.SQL.PostgreSQL {
         public static DateTime CURRENT_TIME() {
             throw new NotSupportedException();
         }
+        
+        [Function(UnderscoresAsBlanks = false, OmitParentheses = true)]
+        public static DateTime CURRENT_DATE() {
+            throw new NotSupportedException();
+        }
 
         [Function(OmitParentheses = true)]
         public static DateTime LOCALTIME() {
