@@ -213,6 +213,9 @@ namespace Streamx.Linq.SQL {
         public static DateTime atTimeZone(this DateTime dt, String timeZone) =>
                 throw new NotSupportedException();
 
+        /// <summary>
+        /// A shortcut for <code>atTimeZone("UTC")</code>
+        /// </summary>
         public static DateTime atUTC(this DateTime dt) => dt.atTimeZone("UTC");
         
         [Function("AT TIME ZONE")]
@@ -220,6 +223,9 @@ namespace Streamx.Linq.SQL {
         public static DateTimeOffset atTimeZone(this DateTimeOffset dt, String timeZone) =>
                 throw new NotSupportedException();
         
+        /// <summary>
+        /// A shortcut for <code>atTimeZone("UTC")</code>
+        /// </summary>
         public static DateTimeOffset atUTC(this DateTimeOffset dt) => dt.atTimeZone("UTC");
     }
 }
