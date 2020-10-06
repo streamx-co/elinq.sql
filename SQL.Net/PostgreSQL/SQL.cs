@@ -356,6 +356,16 @@ namespace Streamx.Linq.SQL.PostgreSQL {
         public static DateTime NOW() {
             throw new NotSupportedException();
         }
+        
+        [Function]
+        public static DateTime TIMEZONE(DateTime dt, string timeZone) {
+            throw new NotSupportedException();
+        }
+        
+        [Function]
+        public static DateTimeOffset TIMEZONE(DateTimeOffset dt, string timeZone) {
+            throw new NotSupportedException();
+        }
 
         [Function(UnderscoresAsBlanks = false, OmitParentheses = true)]
         public static DateTime CURRENT_TIME() {
