@@ -3,6 +3,9 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <AssemblyName>Streamx.Linq.SQL</AssemblyName>
+        <VersionPrefix>3.1.10</VersionPrefix>
+        <!--<VersionSuffix>preview</VersionSuffix>-->
+        <RepositoryUrl Condition="'$(RepositoryUrl)'==''">https://github.com/streamx-co/elinq.sql.git</RepositoryUrl>
     </PropertyGroup>
 
     <Import Project="../Commons.csproj"/>

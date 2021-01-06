@@ -12,6 +12,8 @@
         <PackageIcon>icon-256.png</PackageIcon>
         <RootNamespace>$(AssemblyName)</RootNamespace>
         <noWarn>1591</noWarn>
+        <EFVersion>5.0.0</EFVersion>
+        <DefineConstants>EFCORE5</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup>
