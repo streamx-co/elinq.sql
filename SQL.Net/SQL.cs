@@ -29,7 +29,7 @@ namespace Streamx.Linq.SQL {
         /// Generates SQL <code>SELECT</code> clause without aliases. 
         /// </summary>
         [Function(OmitParentheses = true)]
-        public static ITupleSelectClause<T?> SELECT<T>(T? expression) where T : struct, IComparable {
+        public static ITupleSelectClause<T> SELECT<T>(T? expression) where T : struct, IComparable {
             throw new NotSupportedException();
         }
 

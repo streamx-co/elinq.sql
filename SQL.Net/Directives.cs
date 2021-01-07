@@ -251,5 +251,13 @@ namespace Streamx.Linq.SQL {
         /// </summary>
         [Local]
         public static IKeyword InjectSQL(String sql) => new Keyword(sql);
+        
+        /// <summary>
+        /// Pass parameter by local expression
+        /// </summary>
+        [Local]
+        public static T @in<T>(this T t) {
+            return t;
+        }
     }
 }
