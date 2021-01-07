@@ -48,7 +48,7 @@ namespace Streamx.Linq.SQL {
         /// <summary>
         /// Create projection returning a collection (e.g. column)
         /// </summary>
-        public static ICollection<TProperty?> PickMany<TEntity, TProperty>(TEntity entity, TProperty? expression)
+        public static ICollection<TProperty> PickMany<TEntity, TProperty>(TEntity entity, TProperty? expression)
             where TEntity : class, new()
             where TProperty : struct, IComparable {
             return SubQuery(() => {
