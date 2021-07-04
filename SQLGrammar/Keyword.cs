@@ -3,7 +3,7 @@ using System;
 namespace Streamx.Linq.SQL.Grammar {
     public interface IKeyword { }
 
-    public sealed class Keyword : IKeyword, IComparable {
+    public class Keyword : IKeyword, IComparable {
         public Keyword(string value) {
             Value = value;
         }
