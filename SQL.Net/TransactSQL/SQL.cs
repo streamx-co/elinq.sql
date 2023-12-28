@@ -132,11 +132,16 @@ namespace Streamx.Linq.SQL.TransactSQL {
             String replaceWithExpression) {
             throw new NotSupportedException();
         }
-
+        
         [Function]
         public static String SUBSTRING(String expression,
             int start,
             int length) {
+            throw new NotSupportedException();
+        }
+
+        [Function]
+        public static object JSON_VALUE(String expression, String path) {
             throw new NotSupportedException();
         }
 

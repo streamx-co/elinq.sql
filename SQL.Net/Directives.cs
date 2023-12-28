@@ -141,6 +141,25 @@ namespace Streamx.Linq.SQL {
         /// </summary>
         [Alias]
         // ReSharper disable once InconsistentNaming
+        public static IAlias @as(this byte[] field,
+            [Context(ParameterContext.Alias)] byte[] alias) {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        /// Alias column for SELECT.
+        /// </summary>
+        [Alias]
+        // ReSharper disable once InconsistentNaming
+        public static IAlias @as(this byte[] field) {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        /// Alias column for SELECT.
+        /// </summary>
+        [Alias]
+        // ReSharper disable once InconsistentNaming
         public static IAlias<T> @as<T>(this T? field) where T : struct, IComparable {
             throw new NotSupportedException();
         }
